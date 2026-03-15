@@ -7,7 +7,7 @@ import { ShinyButton } from "@/components/ui/ShinyButton";
 export function Navbar() {
   return (
     <motion.nav
-      className="absolute top-0 inset-x-0 flex items-center justify-between px-6 md:px-12 py-5"
+      className="absolute top-0 inset-x-0 flex items-center justify-between px-4 sm:px-6 md:px-12 py-5"
       style={{ zIndex: 60 }}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}

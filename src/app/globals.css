@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000614;
-  --foreground: #ededed;
-  --primary: #57CAFF;
+  --background: #2E1A47; /* Galactic Indigo */
+  --foreground: #E6E6FA; /* Lilac Mist */
+  --primary: #57CAFF; /* Electric Blue */
+  --accent: #4B3078; /* Deep Cosmic Purple */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
 }
 
 body {
@@ -33,3 +36,4 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
