@@ -46,9 +46,9 @@ export function FunFactSection({ participantCount, groupCount }: { participantCo
           <h2
             className="font-black text-white"
             style={{
-               fontSize: "clamp(2rem, 6vw, 3.5rem)",
-               letterSpacing: "0.02em",
-               textShadow: "0 0 60px rgba(230,230,250,0.3)",
+              fontSize: "clamp(2rem, 6vw, 3.5rem)",
+              letterSpacing: "0.02em",
+              textShadow: "0 0 60px rgba(230,230,250,0.3)",
             }}
           >
             Project Master Branch
@@ -63,12 +63,8 @@ export function FunFactSection({ participantCount, groupCount }: { participantCo
           }}
         >
           {customStats.map((s, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.65, delay: 0.1 * i, ease: "easeOut" as Easing }}
-              whileHover={{ background: "rgba(230,230,250,0.08)" }}
               className="flex flex-col gap-3 p-9 text-center backdrop-blur-md"
               style={{
                 background: "linear-gradient(180deg, rgba(46,26,71,0.6), rgba(23,13,35,0.8))",
@@ -95,7 +91,7 @@ export function FunFactSection({ participantCount, groupCount }: { participantCo
               <p style={{ fontSize: "0.78rem", lineHeight: 1.7, color: "rgba(230,230,250,0.6)" }}>
                 {s.sub}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -15,40 +15,39 @@ import Student3 from "@/components/attendees/Student3";
 import Student4 from "@/components/attendees/Student4";
 import Student5 from "@/components/attendees/Student5";
 
-import { ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import { motion } from "framer-motion";
 
-// Object at the top of the landing page containing group as key and another object as value.
-// The object value contains each members name and their components.
-const attendeesData: Record<string, Record<string, ReactNode>> = {
-  "Group 1": {
-    "Student 1": <Student1 />,
-    "Student 2": <Student1 />,
-    "Student 3": <Student1 />,
-    "Student 4": <Student1 />,
-    "Student 5": <Student1 />,
-    "Student 6": <Student1 />,
-    "Student 7": <Student1 />,
-    "Student 8": <Student1 />,
-  },
-  "Group 2": {
-    "Student 2": <Student2 />,
-  },
-  "Group 3": {
-    "Student 3": <Student3 />,
-  },
-  "Group 4": {
-    "Student 4": <Student4 />,
-  },
-  "Group 5": {
-    "Student 5": <Student5 />,
-  },
+// Object at the top of the landing page containing group as key and an array of components as value.
+const attendeesData: Record<string, ReactNode[]> = {
+  "Group 1": [
+    <Student1 />,
+    <Student1 />,
+    <Student1 />,
+    <Student1 />,
+    <Student1 />,
+    <Student1 />,
+    <Student1 />,
+    <Student1 />,
+  ],
+  "Group 2": [
+    <Student2 />,
+  ],
+  "Group 3": [
+    <Student3 />,
+  ],
+  "Group 4": [
+    <Student4 />,
+  ],
+  "Group 5": [
+    <Student5 />,
+  ],
 };
 
 export default function Home() {
   const parallax = useParallax();
 
-  const participantCount = Object.values(attendeesData).reduce((acc, group) => acc + Object.keys(group).length, 0);
+  const participantCount = Object.values(attendeesData).reduce((acc, group) => acc + group.length, 0);
   const groupCount = Object.keys(attendeesData).length;
 
   return (
@@ -120,15 +119,17 @@ export default function Home() {
                     </h3>
 
                     <div className="grid grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 px-4 sm:px-0">
-                      {Object.entries(members).map(([memberName, Component], memberIndex) => (
+                      {members.map((Component, memberIndex) => (
                         <motion.div
-                          key={memberName}
+                          key={`member-${memberIndex}`}
                           initial={{ opacity: 0, y: 20 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true, margin: "-50px" }}
                           transition={{ duration: 0.5, delay: memberIndex * 0.1 }}
                         >
-                          {Component}
+                          <Fragment key={memberIndex}>
+                            {Component}
+                          </Fragment>
                         </motion.div>
                       ))}
                     </div>
