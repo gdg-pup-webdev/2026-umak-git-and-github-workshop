@@ -183,3 +183,22 @@ git merge [branch-name]
 ```bash
 git stash
 ```
+
+---
+
+## Documentation
+
+- [docs/state.md](docs/state.md) - Teaching position / handover
+- [docs/index.md](docs/index.md) - Doc inventory
+- [FLAGS.md](FLAGS.md) - Improvement register
+- [AGENTS.md](AGENTS.md) - Agent load order
+
+## Contributors
+
+This project is made possible by the GDG PUP community.
+
+Student forks and profile-card PRs are the intended contributions. The template author in git history is a placeholder (`Your Name`), so no named maintainer row is listed here yet. Add yourself when you land a real commit.
+
+| Role | Name |
+| --- | --- |
+| Development | Workshop participants via fork and PR |
