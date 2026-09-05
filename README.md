@@ -1,10 +1,16 @@
 # UMAK CCIS Week: Git & GitHub Study Jam 2026
 
+[![Status: Teaching](https://img.shields.io/badge/Status-Teaching-blue)](docs/state.md)
+[![Stack: Next.js](https://img.shields.io/badge/Stack-Next.js-black)](#about)
+[![FMD philosophy: 1.31.0](https://img.shields.io/badge/FMD%20philosophy-1.31.0-blue)](AGENTS.md)
+
+
 Welcome to the Git & GitHub Study Jam activity repository! This project is a collaborative playground to practice Git and GitHub skills. We'll work together to populate this Next.js website with everyone's profile cards.
 
 ## Table of Contents
 
 - [About](#about)
+- [Start here](#start-here)
 - [The activity](#the-activity)
 - [Quick start](#quick-start)
 - [Git command reference](#git-command-reference)
@@ -19,6 +25,12 @@ In this activity, you will:
 2. Create your own personal profile card from a provided template.
 3. Add your card to the website.
 4. Submit a Pull Request to merge your changes into the main project.
+
+## Start here
+
+- **Humans:** this README, then [docs/state.md](docs/state.md)
+- **Agents:** [AGENTS.md](AGENTS.md) (state → index → FLAGS)
+- **Contributors:** table below
 
 ## The activity
 
@@ -255,8 +267,9 @@ git stash
 
 This project is made possible by the GDG PUP community.
 
-Student forks and profile-card PRs are the intended contributions. The template author in git history is a placeholder (`Your Name`), so no named maintainer row is listed here yet. Add yourself when you land a real commit.
+Student forks and profile-card PRs are the intended contributions. The template author in git history is a placeholder (`Your Name`), so named student rows are not listed here yet. Add yourself when you land a real commit.
 
-| Role | Name |
-| --- | --- |
-| Development | Workshop participants via fork and PR |
+| Name | Role | GitHub |
+| --- | --- | --- |
+| [Carlos Jerico Dela Torre](https://www.linkedin.com/in/delatorrecj) | Chief Technology Officer (2025-2026) | [@delatorrecj](https://github.com/delatorrecj) |
+
